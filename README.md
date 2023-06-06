@@ -1,51 +1,54 @@
-## Java-Ex-08
-### Using Inheritance one class can acquire the properties of others.
+## Java-Ex-09
+### Write a program to add, retrieve and remove the element from the ArrayList.
 ## Aim:-
-To write a Java program using inheritance one class can acquire the properties of others.
+To write a Java program to add , remove, retrieve an element in an Array.
 
 ## Algorithm:-
 ### Step 1 : 
 Open Intelli J application or any other code editor.
 
 ### Step 2 : 
-Create a class called "Animal" and create required statements.
+Create an array with a name of your choice.
 
 ### Step 3 : 
-Create a another class called "Bird" and create required statements.
-
-### Step 3 : 
-Create another class,called the Solution Class.
+Using Scanner, Input a number or a element from the user.
 
 ### Step 4 : 
-Using the 'extends' keyword you can inherit classes, do the same with above created class.
+Using for loop insert,remove,retrieve the input element at the end of the array.
 
 ### Step 5 : 
-Display the statements from the first and second Class using Solution Class in the terminal.
+Display the appended array in the terminal.
 
 ## Program:-
 ```java
-class Animal{
-void walk(){
-System.out.println("I am walking");
-  }
+import java.util.*;
+class ArrayListDemo
+{
+public static void main(String[] args)
+{
+ArrayList<String> al = new ArrayList<String>();
+System.out.println("Size of ArrayList: "+al.size());
+//Adding the elements
+al.add("Java");
+al.add("JDBC");
+System.out.println("Elements of first ArrayList: "+al);
+ArrayList<String> al2 = new ArrayList<String>();
+al2.add("EJB");
+al2.add("Struts");
+//Adding the both array
+al2.addAll(al);
+System.out.println("Elements of second ArrayList: "+al2);
+//remove the element
+al2.remove("EJB");
+System.out.println("Elements of ArrayList after deletion: "+al2);
+System.out.println("Size of ArrayList: "+al2.size());
+//Retriving 2nd index element
+System.out.println("The element at 2nd index is: "+al2.get(2));
 }
-
-class Bird extends Animal{
-void fly(){
-System.out.println("I am flying");
-  }
-}
-
-public class Solution{
-public static void main(String args[]){
-Bird bird = new Bird();
-bird.walk();
-bird.fly();
-  }
 }
 ```
 ## Output:-
-![image](https://github.com/Kirupanandhan/Write-a-program-to-add-retrieve-and-remove-the-element-from-the-ArrayList/assets/94386222/84f21e4d-ca53-47d2-871a-12908bd60d01)
+![image](https://github.com/Kirupanandhan/Write-a-program-to-add-retrieve-and-remove-the-element-from-the-ArrayList/assets/94386222/30ac535a-417b-4095-9620-d13ec41ac45d)
 
 ## Result:-
-We have successfully created a Java program using inheritance one class can acquire the properties of others.
+We have successfully created a Java program to add , remove, retrieve an element in an Array.
